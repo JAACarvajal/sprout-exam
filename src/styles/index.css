@@ -1,0 +1,27 @@
+:root {
+  --gray: #333333;
+  --gray2: #525252;
+  --dirty-white: #dddddd;
+  --sprout-color: #17ad49;
+  --active-button: #e6ffee;
+  --sidebar-header: #00291b;
+  --sidebar-button: #2d4f43;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: inherit;
+  min-width: 1366px;
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+}
