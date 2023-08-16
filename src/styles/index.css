@@ -1,6 +1,10 @@
 :root {
   --gray: #333333;
   --gray2: #525252;
+  --gray3: #c3cdc9;
+  --green2: #879a94;
+  --green3: #3c5b51;
+  --blue: #0f6eeb;
   --dirty-white: #dddddd;
   --sprout-color: #17ad49;
   --active-button: #e6ffee;
@@ -8,7 +12,13 @@
   --sidebar-button: #2d4f43; /* button text color (active) */
   --sidebar-button-inactive: #5a756b; /* button text color (inactive) */
   --border: #879a94;
+  --filter-title: #3c5b51;
+  --calendar-label: #879a94;
   --border-bottom: #c3cdc9;
+
+  /* Vuedatepicker */
+  --dp-input-icon-padding: 10px !important;
+  --dp-input-padding: 10px 20px !important;
 }
 
 * {
@@ -23,7 +33,7 @@ html, body {
 
 #app {
   height: inherit;
-  min-width: 1366px;
+  min-width: 100%;
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-family: 'Titillium Web', sans-serif;

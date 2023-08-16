@@ -32,5 +32,5 @@
 </script>
 
 <style scoped>
-@import '../../styles/general/NavigationBar/index.css';
+@import '../../styles/general/navigation-bar.css';
 </style>

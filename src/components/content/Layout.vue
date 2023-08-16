@@ -11,5 +11,5 @@ import Content from './Content.vue';
 </script>
 
 <style scoped>
-@import '../../styles/content/Layout/index.css';
+@import '../../styles/content/layout.css';
 </style>

@@ -7,5 +7,5 @@
 </script>
 
 <style scoped>
-@import '../../styles/content/Content/index.css';
+@import '../../styles/content/content.css';
 </style>
