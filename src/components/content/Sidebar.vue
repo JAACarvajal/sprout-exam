@@ -6,9 +6,15 @@
                 logs of the
                 employees.</p>
             <div class="sidebar_header_actions">
-                <button class="button active">Attendance Logs</button>
+                <button class="button active">
+                    <font-awesome-icon icon="fa-regular fa-calendar" style="color: #20ad49;" />
+                    <span>Attendance Logs</span>
+                </button>
                 <br>
-                <button class="button">Exported Files</button>
+                <button class="button">
+                    <font-awesome-icon icon="fa-solid fa-download" />
+                    <span>Exported Files</span>
+                </button>
             </div>
         </div>
         <div class="sidebar_section sidebar_filter">

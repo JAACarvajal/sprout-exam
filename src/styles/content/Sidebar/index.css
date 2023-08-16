@@ -2,30 +2,31 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-right: 1px solid black;
+    border-right: 2px solid var(--border);
 }
 
 /* --- SIDEBAR HEADER --- */
 .sidebar .sidebar_header {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    padding: 15px 30px;
+    padding: 20px 30px;
     flex: 3;
     color: var(--sidebar-header);
 }
 
 .sidebar .sidebar_section {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--border-bottom);
 }
 
 .sidebar .sidebar_header .sidebar_header_title {
     font-size: 1.8rem;
     margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .sidebar .sidebar_header .sidebar_header_description {
     line-height: 1.6rem;
+    font-weight: 600;
     font-size: 1rem;
     margin-bottom: 25px;
 }
@@ -39,11 +40,16 @@
     border: none;
     border-radius: 3px;
     background-color: transparent;
-    color: var(--sidebar-button)
+    color: var(--sidebar-button-inactive)
+}
+
+.sidebar .sidebar_header .sidebar_header_actions .button span {
+    margin-left: 10px;
 }
 
 .sidebar .sidebar_header .sidebar_header_actions .button.active {
     background-color: var(--active-button);
+    color: var(--sidebar-button)
 }
 /* --- SIDEBAR HEADER END --- */
 

@@ -5,7 +5,10 @@
   --sprout-color: #17ad49;
   --active-button: #e6ffee;
   --sidebar-header: #00291b;
-  --sidebar-button: #2d4f43;
+  --sidebar-button: #2d4f43; /* button text color (active) */
+  --sidebar-button-inactive: #5a756b; /* button text color (inactive) */
+  --border: #879a94;
+  --border-bottom: #c3cdc9;
 }
 
 * {
