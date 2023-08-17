@@ -1,3 +1,53 @@
 .content {
     flex: 3.7;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content_header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.content .content_logs {
+    flex: 20;
+    height: 100%;
+    border: 1px solid var(--gray3);
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .content_logs .no_results {
+    text-align: center;
+}
+
+.content .content_pagination {
+    flex: 2;
+    height: 100%;
+    border: 1px solid var(--gray3);
+    border-top: 0;
+    width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.content .content_pagination .content_pagination_items {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }

@@ -41,7 +41,8 @@
     border: none;
     border-radius: 3px;
     background-color: transparent;
-    color: var(--sidebar-button-inactive)
+    color: var(--sidebar-button-inactive);
+    cursor: pointer;
 }
 
 .sidebar .sidebar_header .sidebar_header_actions .button span {

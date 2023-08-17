@@ -2,6 +2,7 @@
     <div class="datepicker_container">
         <span class="label">{{ props.label }}</span>
 
+        <!-- Vue date picker component -->
         <VueDatePicker v-model="date" :format="formatDatePicker">
             <!-- Remove  the calendar icon on the left side -->
             <template #input-icon>
@@ -19,13 +20,10 @@ import { ref, defineProps } from 'vue';
 import dayjs from 'dayjs';
 import VueDatePicker from '@vuepic/vue-datepicker';
 
-// Define props
 const props = defineProps({
     date: Date,
     label: String
 });
-
-// Date variable
 const date = ref(props.date);
 
 /**
