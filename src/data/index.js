@@ -23,7 +23,7 @@ export const filterList = [
 
 export const dropdownData = [
       {
-        'name': 'Sprout!',
+        'name': 'Sprout',
         'departments': [
           {
             'name': 'HR',
@@ -82,7 +82,7 @@ export const dropdownData = [
         ]
       },
       {
-        'name': 'Solutions!',
+        'name': 'Solutions',
         'departments': [
           {
             'name': 'HR',

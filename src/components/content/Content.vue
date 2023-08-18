@@ -1,86 +1,39 @@
 <template>
-    <section class="content" v-if="props.shownContent === 'attendance_logs'">
-        <header class="content_header">
-            <div class="content_header_title">
-                <font-awesome-icon icon="fa-regular fa-calendar" style="color: #20ad49;" />
-                <span>Date Range</span>
-            </div>
-            <div class="content_header_buttons">
-                <button>Active Logs</button>
-                <button>Deleted Logs</button>
-            </div>
-        </header>
-        <section class="content_logs">
-            <div class="no_results">
-                <h2>No attendance logs to show</h2>
-                <p>Get started by searching for the logs</p>
-            </div>
-        </section>
-        <section class="content_pagination">
-            <div class="content_pagination_items">
-                <p>Items per page</p>
-                <select>
-                    <option value="10" selected>10</option>
-                </select>
-            </div>
-            <div class="content_pagination_items">
-                <font-awesome-icon icon="fa-solid fa-backward-fast" />
-                <font-awesome-icon icon="fa-solid fa-caret-left" />
-                <span>Page</span>
-                <input type="text" value="1" style="width: 40px; text-align: center;" />
-                <span>of 1</span>
-                <font-awesome-icon icon="fa-solid fa-forward-fast" />
-                <font-awesome-icon icon="fa-solid fa-caret-right" />
-            </div>
-            <div class="content_pagination_items">
-                <p>Showing 0 of 0</p>
-            </div>
-        </section>
-    </section>
-    <section class="content" v-if="props.shownContent === 'exported_files'">
-        <header class="content_header">
-            <div class="content_header_title">
-                <h2>Exported Files</h2>
-                <p>No file to download</p>
-            </div>
-        </header>
-        <section class="content_logs">
-            <div class="no_results">
-                <h2>There are no exported items to show on your end.</h2>
-                <p>Search for the logs and click <span>Export</span> to generate the file here.</p>
-            </div>
-        </section>
-        <section class="content_pagination">
-            <div class="content_pagination_items">
-                <p>Items per page</p>
-                <select>
-                    <option value="10" selected>10</option>
-                </select>
-            </div>
-            <div class="content_pagination_items">
-                <font-awesome-icon icon="fa-solid fa-backward-fast" />
-                <font-awesome-icon icon="fa-solid fa-caret-left" />
-                <span>Page</span>
-                <input type="text" value="1" style="width: 40px; text-align: center;" />
-                <span>of 1</span>
-                <font-awesome-icon icon="fa-solid fa-forward-fast" />
-                <font-awesome-icon icon="fa-solid fa-caret-right" />
-            </div>
-            <div class="content_pagination_items">
-                <p>Showing 0 of 0</p>
-            </div>
-        </section>
-    </section>
+    <ContentLayout>
+        <template v-slot:header>
+            <ContentHeader @update-display-logs="toggleLogsToDisplay" :logs-to-display="logsToDisplay"
+                :shown-content="props.shownContent" />
+        </template>
+        <template v-slot:table>
+            <LogsList :content="props.shownContent" />
+        </template>
+        <template v-slot:pagination>
+            <Pagination />
+        </template>
+    </ContentLayout>
 </template>
   
 <script setup>
-import { ref, defineProps } from 'vue';
+import { ref } from 'vue';
+import Pagination from '../general/Pagination.vue';
+import ContentLayout from '../layout/ContentLayout.vue';
+import LogsList from '../general/content/LogsList.vue';
+import ContentHeader from '../general/content/ContentHeader.vue';
+
 const props = defineProps({
     shownContent: String
 });
+const logsToDisplay = ref('active_logs');
 
+/**
+ * Toggle between active logs and deleted logs
+ * @param {*} logName 
+ */
+const toggleLogsToDisplay = (logName) => {
+    logsToDisplay.value = logName;
+}
 </script>
 
-<style scoped>
+<style>
 @import '../../styles/content/content.css';
 </style>

@@ -30,7 +30,7 @@
 </template>
   
 <script setup>
-import { ref, defineProps, defineEmits, computed } from 'vue';
+import { defineEmits, computed } from 'vue';
 import { useStore } from 'vuex';
 import DropdownItems from '../general/DropdownItems.vue';
 

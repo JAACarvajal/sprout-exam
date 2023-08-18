@@ -16,7 +16,20 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faDownload, faUsers, faLocationDot, faMagnifyingGlass, faChevronDown, faChevronUp, faCaretLeft, faCaretRight, faForwardFast, faBackwardFast } from '@fortawesome/free-solid-svg-icons'
+import { 
+    faDownload, 
+    faUsers, 
+    faLocationDot, 
+    faMagnifyingGlass, 
+    faChevronDown, 
+    faChevronUp, 
+    faCaretLeft, 
+    faCaretRight, 
+    faForwardFast, 
+    faBackwardFast,
+    faCheck,
+    faCaretDown,
+} from '@fortawesome/free-solid-svg-icons'
 import { faCalendar, faBuilding, faUser } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -35,6 +48,8 @@ library.add(
     faCaretRight,
     faForwardFast,
     faBackwardFast,
+    faCheck,
+    faCaretDown
 );
 
 createApp(App)

@@ -1,9 +1,12 @@
+/* CSS variables */
 :root {
   --gray: #333333;
   --gray2: #525252;
   --gray3: #c3cdc9;
+  --gray4: #c3cdc9;
   --green2: #879a94;
   --green3: #3c5b51;
+  --green4: #00291b;
   --blue: #0f6eeb;
   --dirty-white: #dddddd;
   --sprout-color: #17ad49;
@@ -22,6 +25,7 @@
   --dp-input-padding: 10px 20px !important;
 }
 
+/* Global rules */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -38,4 +42,25 @@ html, body {
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-family: 'Titillium Web', sans-serif;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 3px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar track when the user hovers over it */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #FFF; /* Color of the track */
 }

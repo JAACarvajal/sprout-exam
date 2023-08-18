@@ -3,6 +3,8 @@
     flex-direction: column;
     flex: 1;
     border-right: 2px solid var(--border);
+    min-width: 355px;
+    overflow-y: auto;
 }
 
 .sidebar .sidebar_section {
@@ -15,7 +17,6 @@
 .sidebar .sidebar_header {
     display: flex;
     flex-direction: column;
-    flex: 1;
     color: var(--sidebar-header);
 }
 
@@ -49,6 +50,10 @@
     margin-left: 10px;
 }
 
+.sidebar .sidebar_header .sidebar_header_actions svg.active {
+    color: var(--sprout-color);
+}
+
 .sidebar .sidebar_header .sidebar_header_actions .button.active {
     background-color: var(--active-button);
     color: var(--sidebar-button)
@@ -57,7 +62,10 @@
 
 /* --- SIDEBAR FILTER --- */
 .sidebar .sidebar_filter {
-    flex: 1;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sidebar .sidebar_filter .sidebar_filter_date_title {
@@ -132,6 +140,7 @@
     color: var(--gray3);
     font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .sidebar .sidebar_action .sidebar_action_button.active {

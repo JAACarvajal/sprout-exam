@@ -1,4 +1,7 @@
 <template>
+    <div class="filter_item" @click="updateSelectedItem('All')">
+        <p>All</p>
+    </div>
     <div v-for="(item, key) in getDropdownList()" :key="key" class="filter_item" @click="updateSelectedItem(item.name)">
         <p>{{ item.name }}</p>
     </div>

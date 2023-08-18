@@ -16,7 +16,7 @@
 </template>
   
 <script setup>
-import { ref, defineProps } from 'vue';
+import { ref } from 'vue';
 import dayjs from 'dayjs';
 import VueDatePicker from '@vuepic/vue-datepicker';
 
