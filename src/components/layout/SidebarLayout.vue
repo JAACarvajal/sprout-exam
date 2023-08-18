@@ -5,5 +5,3 @@
         <slot name="actions"></slot>
     </section>
 </template>
-<script setup>
-</script>

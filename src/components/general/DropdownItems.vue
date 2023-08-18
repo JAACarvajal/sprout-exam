@@ -8,7 +8,7 @@
 </template>
   
 <script setup>
-import { defineProps, defineEmits, computed, watch } from 'vue';
+import { computed } from 'vue';
 import { useStore } from 'vuex';
 
 const props = defineProps({
@@ -17,26 +17,31 @@ const props = defineProps({
 const store = useStore();
 const emits = defineEmits(['close-dropdown']);
 
+const companyList = computed(() => store.getters.getCompanyList).value;
+const departmentList = computed(() => store.getters.getDepartmentList).value;
+const locationList = computed(() => store.getters.getLocationList).value;
+const employeeList = computed(() => store.getters.getEmployeeList).value;
+
 /**
  * Get the dropdown item list from store
  */
 const getDropdownList = () => {
     switch (props.dropdown) {
         case 'company':
-            return computed(() => store.getters.getCompanyList).value
+            return companyList;
         case 'department':
-            return computed(() => store.getters.getDepartmentList).value
+            return departmentList;
         case 'location':
-            return computed(() => store.getters.getLocationList).value
+            return locationList;
         case 'employee':
-            return computed(() => store.getters.getEmployeeList).value
+            return employeeList;
         default:
             break;
     }
 }
 
 /**
- * Updated the selected item on change
+ * Update/reset the selected item on change
  * @param {*} newValue 
  */
 const updateSelectedItem = (newValue) => {
@@ -50,7 +55,7 @@ const updateSelectedItem = (newValue) => {
     }
 
     if (props.dropdown === 'department') {
-        // Reset department, location, and employees
+        // Reset location, and employees
         store.commit('updateMultipleFilter', {
             location: '',
             employee: '',
@@ -58,7 +63,7 @@ const updateSelectedItem = (newValue) => {
     }
 
     if (props.dropdown === 'location') {
-        // Reset department, location, and employees
+        // Reset employee
         store.commit('updateMultipleFilter', {
             employee: '',
         });

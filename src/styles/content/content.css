@@ -63,6 +63,15 @@
 
 .content .content_logs .no_results {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--green4);
+}
+
+.content .content_logs .no_results svg {
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 /* CONTENT PAGINATION */

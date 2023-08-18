@@ -29,9 +29,6 @@
     </nav>
 </template>
 
-<script setup>
-</script>
-
 <style scoped>
 @import '../../styles/general/navigation-bar.css';
 </style>

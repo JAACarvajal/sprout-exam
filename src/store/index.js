@@ -4,12 +4,10 @@ import { dropdownData } from '../data';
 export default createStore({
     state: {
         filter: {
-            date_from  : '',
-            date_to    : '',
             company    : dropdownData[0].name,
             department : 'ALL',
-            location   : 'ALL',
-            employee   : 'ALL',
+            location   : '',
+            employee   : '',
         },
         data: dropdownData
     },
@@ -21,6 +19,24 @@ export default createStore({
          */
         getFilters(state) {
             return state.filter;
+        },
+        /**
+         * Check if filters are selected properly
+         * @param {*} state 
+         * @returns 
+         */
+        checkFilterState(state, getters) {
+            if (state.filter.company !== '' && state.filter.department !== '' && state.filter.location !== '' && state.filter.employee !== '') {
+                return true;
+            }
+
+            if (getters.getLocationList.length === 0 && (state.filter.company !== '' && state.filter.department !== '' && state.filter.employee !== '')) {
+                return true;
+            }
+
+            if (getters.getEmployeeList.length === 0 && (state.filter.company !== '' && state.filter.department !== '' && state.filter.location !== '')) {
+                return true;
+            }
         },
         /**
          * Get company list from state

@@ -30,7 +30,7 @@
 </template>
   
 <script setup>
-import { defineEmits, computed } from 'vue';
+import { computed } from 'vue';
 import { useStore } from 'vuex';
 import DropdownItems from '../general/DropdownItems.vue';
 
@@ -42,7 +42,9 @@ const props = defineProps({
 });
 
 const selectedFilter = computed(() => store.state.filter);
-const filterState = computed(() => store.getters.getFilters);
+const locationList = computed(() => store.getters.getLocationList);
+const employeeList = computed(() => store.getters.getEmployeeList);
+const employeeWithLocationList = computed(() => store.getters.getEmployeesWithLocation);
 
 /**
  * Toggle dropdown
@@ -69,14 +71,10 @@ const checkIfDropownDisablility = () => {
     switch (props.filterData.name) {
         case 'location':
             // Location dropdown is disabled when the following conditions are met
-            return computed(() => store.getters.getLocationList).value.length === 0 ||
-                computed(() => store.getters.getEmployeesWithLocation).value.length === 0 ||
-                (computed(() => store.getters.getLocationList).value.length === 0 &&
-                    computed(() => store.getters.getEmployeeList).value.length === 0);
+            return locationList.value.length === 0 || employeeWithLocationList.value.length === 0 && (locationList.value.length === 0 && employeeList.value.length === 0);
         case 'employee':
             // Employee dropdown is disabled when the following conditions are met
-            return (computed(() => store.getters.getLocationList).value.length === 0 &&
-                computed(() => store.getters.getEmployeeList).value.length === 0) || computed(() => store.getters.getEmployeeList).value.length === 0;
+            return (locationList.value.length === 0 && employeeList.value.length === 0) || employeeList.value.length === 0;
         default:
             return false;
     }

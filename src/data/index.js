@@ -67,7 +67,11 @@ export const dropdownData = [
           },
           {
             'name': 'Marketing',
-            'locations': [],
+            'locations': [
+              {
+                  'name': 'Office 3'
+              }
+            ],
             'employees': []
           },
           {
@@ -77,7 +81,16 @@ export const dropdownData = [
                     'name': 'Office 3'
                 }
             ],
-            'employees': []
+            'employees': [
+                {
+                    'name': 'Employee 5',
+                    'location': 0
+                },
+                {
+                    'name': 'Employee 6',
+                    'location': 0
+                }
+            ]
           }
         ]
       },

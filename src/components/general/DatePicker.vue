@@ -3,7 +3,7 @@
         <span class="label">{{ props.label }}</span>
 
         <!-- Vue date picker component -->
-        <VueDatePicker v-model="date" :format="formatDatePicker">
+        <VueDatePicker v-model="date" format="MM / dd / yyyy">
             <!-- Remove  the calendar icon on the left side -->
             <template #input-icon>
             </template>
@@ -17,23 +17,13 @@
   
 <script setup>
 import { ref } from 'vue';
-import dayjs from 'dayjs';
 import VueDatePicker from '@vuepic/vue-datepicker';
 
 const props = defineProps({
-    date: Date,
+    dateType: String,
     label: String
 });
-const date = ref(props.date);
-
-/**
- * Format date to display on the datepicker
- * @param {*} date 
- * @return 
- */
-const formatDatePicker = (date) => {
-    return dayjs().format('DD / MM / YYYY');
-}
+const date = ref(new Date);
 </script>
 
 <style scoped>

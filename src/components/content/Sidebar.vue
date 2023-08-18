@@ -7,7 +7,7 @@
 
         <!-- Sidebar Filters (show only when attendance logs is selected) -->
         <template v-slot:filters>
-            <Filters :show-dropdowns="showDropdowns" v-if="props.shownContent === 'attendance_logs'" />
+            <Filters v-if="props.shownContent === 'attendance_logs'" />
         </template>
 
         <!-- Sidebar Actions buttons (show only when attendance logs is selected) -->

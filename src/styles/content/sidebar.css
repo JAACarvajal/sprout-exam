@@ -135,7 +135,6 @@
     justify-content: center;
     padding: 15px 0;
     border: 1px solid var(--gray3);
-    background-color: #FFF;
     border-radius: 5px;
     color: var(--gray3);
     font-size: 1rem;
@@ -143,7 +142,23 @@
     cursor: pointer;
 }
 
-.sidebar .sidebar_action .sidebar_action_button.active {
+.sidebar .sidebar_action .sidebar_action_button.search {
+    background-color: var(--gray3);
+    color: #FFF;
+}
+
+.sidebar .sidebar_action .sidebar_action_button.export {
+    background-color: #FFF;
+}
+
+.sidebar .sidebar_action .sidebar_action_button.export.active {
+    border: none;
+    background-color: #FFF;
+    color: var(--sprout-color);
+    border: 1px solid var(--sprout-color);
+}
+
+.sidebar .sidebar_action .sidebar_action_button.search.active {
     border: none;
     background-color: var(--sprout-color);
     color: #FFF;

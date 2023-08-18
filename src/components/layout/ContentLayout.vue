@@ -5,5 +5,3 @@
         <slot name="pagination"></slot>
     </section>
 </template>
-<script setup>
-</script>

@@ -2,8 +2,8 @@
     <div class="sidebar_section sidebar_filter">
         <div class="sidebar_filter_date">
             <h4 class="sidebar_filter_date_title">DATE RANGE</h4>
-            <DatePicker :date="new Date()" label="Date From" />
-            <DatePicker :date="new Date()" label="Date To" />
+            <DatePicker date-type="date_from" label="Date From" />
+            <DatePicker date-type="date_to" label="Date To" />
         </div>
         <div class="sidebar_filter_dropdown">
             <!-- Sidebar filter header -->

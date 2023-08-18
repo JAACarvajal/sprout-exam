@@ -15,7 +15,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vuepic/vue-datepicker": "^6.0.0",
-    "dayjs": "^1.11.9",
     "vue": "^3.3.4",
     "vuex": "^4.0.2"
   },
