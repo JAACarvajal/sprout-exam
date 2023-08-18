@@ -17,8 +17,8 @@
 import { ref } from 'vue';
 import Pagination from '../general/Pagination.vue';
 import ContentLayout from '../layout/ContentLayout.vue';
-import LogsList from '../general/content/LogsList.vue';
-import ContentHeader from '../general/content/ContentHeader.vue';
+import LogsList from '../general/Content/LogsList.vue';
+import ContentHeader from '../general/Content/ContentHeader.vue';
 
 const props = defineProps({
     shownContent: String
